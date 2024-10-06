@@ -1,0 +1,169 @@
+/*-------------------------------- navbar------------------------------------  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Dropdown Button */
+.drop-one {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.drop-one i {
+  font-size: 1.2rem;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 260px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 2px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*------------------------------- navbar two----------------------------- */
+.nav-two {
+  padding: 0 7.8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f7f7;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 8;
+}
+
+.nav-two .logo {
+  height: 6.2rem;
+}
+
+.navbar-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.navbar-link {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000000;
+  transition: all 0.3s;
+}
+
+.navbar-link:hover {
+  color: #78335d;
+}
+.drop-one:hover {
+  color: #78335d;
+}
+
+.mobile-navbar-btn {
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+}
+
+.mobile-nav-icon {
+  width: 4rem;
+  height: 4rem;
+  color: #000000;
+  display: none;
+}
+
+.mobile-navbar-btn.open .mobile-nav-icon[name="menu-outline"] {
+  display: none;
+}
+
+.mobile-navbar-btn.open .mobile-nav-icon[name="close-outline"] {
+  display: flex;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-two {
+    padding: 0 2.4rem;
+  }
+
+  .nav-two .logo {
+    width: 50%;
+    height: 50%;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    background: #e7e7e7;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: left;
+    gap: 0.5rem;
+  }
+
+  .active .navbar {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .mobile-navbar-btn {
+    display: block;
+    z-index: 999;
+  }
+
+  .mobile-nav-icon[name="menu-outline"] {
+    display: block;
+  }
+
+  .mobile-nav-icon[name="close-outline"] {
+    display: none;
+  }
+}

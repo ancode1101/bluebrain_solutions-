@@ -1,0 +1,76 @@
+/* Dropdown container */
+.drop-one {
+    position: relative;
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    z-index: 1;
+  }
+  
+  /* Dropdown submenu items */
+  .dropdown-content .dropdown-submenu {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .dropdown-content .dropdown-submenu a {
+    padding: 2px 20px;
+    text-decoration: none;
+    color: black;
+    display: block;
+  }
+  
+  .dropdown-content .dropdown-submenu a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu when the parent is hovered */
+  .drop-one:hover .dropdown-content {
+    display: block;
+  }
+
+  .drop-one:hover a .fa-angle-down {
+    transform: rotate(180deg); /* Rotate the arrow */
+  }
+  
+  
+  /* Optional: Add hover effect to main dropdown link */
+  .drop-one a.navbar-link:hover {
+    background-color: #444;
+    color: white;
+  }
+  
+  /* Dropdown animation (optional) */
+  .dropdown-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .drop-one:hover .dropdown-content {
+    opacity: 1;
+  }
+  
+  /* Responsive dropdown for mobile */
+  @media (max-width: 768px) {
+    .dropdown-content {
+      position: static;
+      width: 80%;
+      box-shadow: none;
+    }
+    
+    .dropdown-content .dropdown-submenu a {
+      padding: 2px 20px;
+    }
+    
+    .navbar-list.active .dropdown-content {
+      display: block;
+    }
+  }
+  

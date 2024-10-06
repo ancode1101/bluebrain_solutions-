@@ -1,0 +1,128 @@
+/*------------------------- slider section-------------------------- */
+.carousel-caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  width: 50%;
+}
+
+.carousel-caption h5 {
+  margin-bottom: 0;
+  font-size: 35px;
+  text-align: left;
+  margin: 10px;
+  margin-left: 30px;
+  margin-top: 50px;
+}
+
+.carousel-caption p {
+  margin-top: 5px;
+  font-size: 16px;
+  text-align: left;
+  margin: 10px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption {
+    width: 80%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 13px;
+    margin-top: -10px;
+  }
+
+  .carousel-caption p {
+    font-size: 8px;
+    margin-bottom: 10px;
+  }
+}
+/* -------------------------------------------section two ----------------------------------------*/
+.container {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #77aaff 3px solid;
+}
+
+header h1 {
+  float: left;
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  display: inline;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a.active {
+  color: #77aaff;
+}
+
+.about-us {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.about-us h2,
+.about-us h3 {
+  color: #333;
+}
+
+.about-us p {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.about-us ul {
+  list-style: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 1.5rem;
+}
+
+.about-us ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
